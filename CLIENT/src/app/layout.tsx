@@ -3,7 +3,6 @@ import FGSidebar from '@/components/FGLibrary/FGSidebar/FGSidebar';
 import GlobalDialogs from '@/components/GlobalDialogs';
 import { cn } from '@/lib/utils';
 import { ClerkProvider } from '@clerk/nextjs';
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import 'primeicons/primeicons.css';
@@ -30,14 +29,6 @@ export default function RootLayout({
       <PrimeReactProvider>
         <html lang='en'>
           <body className={cn(inter.className, 'bg-zinc-800 text-white')}>
-            <noscript>
-              <iframe
-                src='https://www.googletagmanager.com/ns.html?id=GTM-T75XCCSR'
-                height='0'
-                width='0'
-                // @ts-ignore
-                style='display:none;visibility:hidden'></iframe>
-            </noscript>
             <FGSidebar />
             <GlobalDialogs />
             <FGNotification />
@@ -45,8 +36,6 @@ export default function RootLayout({
               <main className='container mx-auto px-2 pt-16'>{children}</main>
             </HydrationProvider>
           </body>
-          <GoogleTagManager gtmId='GTM-T75XCCSR' />
-          <GoogleAnalytics gaId='G-Q5BDT93GBS' />
         </html>
       </PrimeReactProvider>
     </ClerkProvider>
