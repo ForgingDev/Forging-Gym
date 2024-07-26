@@ -22,8 +22,8 @@ const FGLogo: FC<Props> = ({ size = 'md', className }) => {
           'object-center` cursor-pointer rounded-full object-cover',
           className,
           size === 'sm' && 'h-8 w-8',
-          size === 'md' && 'h-12 w-12',
-          size === 'lg' && 'h-16 w-16'
+          size === 'md' && 'h-10 w-10',
+          size === 'lg' && 'h-14 w-14'
         )}
       />
     </Link>

@@ -2,12 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-.glass-effect {
-  @apply bg-opacity-20 backdrop-blur-md backdrop-filter;
+body {
+  @apply m-0 overflow-x-hidden p-0;
 }
 
-a {
-  @apply text-primary-normal;
+.banner {
+  width: calc(100vw - 0rem);
+}
+
+.outline-text {
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.outline-text-dark {
+  text-shadow:
+    -1px -1px 0 #f87171,
+    1px -1px 0 #f87171,
+    -1px 1px 0 #f87171,
+    1px 1px 0 #f87171;
+}
+
+.glass-effect {
+  @apply bg-opacity-20 backdrop-blur-md backdrop-filter;
 }
 
 @layer utilities {
@@ -25,5 +45,13 @@ a {
 
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: #c0a0b9;
+  }
+
+  ::selection {
+    @apply text-text-primary bg-primary-normal bg-opacity-40;
+  }
+
+  ::-moz-selection {
+    @apply text-text-primary bg-primary-normal bg-opacity-40;
   }
 }
