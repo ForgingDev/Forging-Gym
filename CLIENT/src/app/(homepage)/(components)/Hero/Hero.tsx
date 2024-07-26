@@ -1,4 +1,4 @@
-import HeroImage from '@/lib/images/hero-wallpaper-2.png';
+import HeroImage from '@/lib/images/hero-wallpaper-2.webp';
 import Image from 'next/image';
 import { FC } from 'react';
 import HeroActions from './HeroActions';
@@ -24,7 +24,7 @@ const Hero: FC = () => {
             <h1 className='outline-text-dark my-4 text-5xl font-extrabold text-primary-normal md:my-6 md:text-7xl'>
               BODY SHAPE
             </h1>
-            <p className='text-text-secondary mb-6 text-sm sm:text-base'>
+            <p className='mb-6 text-sm text-text-secondary sm:text-base'>
               Achieve your fitness goals with our state-of-the-art gym
               facilities and expert trainers. Join us to transform your body and
               mind
