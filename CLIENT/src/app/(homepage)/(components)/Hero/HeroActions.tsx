@@ -14,7 +14,7 @@ const HeroActions: FC = () => {
       <FGButton
         onClick={() => setShowVideo(true)}
         icon={<LucidePlayCircle />}
-        className='bg-transparent hover:text-primary-light'>
+        className='bg-transparent visited:outline-none hover:text-primary-light focus:outline-none'>
         Watch Video
       </FGButton>
       <Dialog
