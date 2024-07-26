@@ -6,7 +6,7 @@ import HeroKPIs from './HeroKPIs/HeroKPIs';
 
 const Hero: FC = () => {
   return (
-    <div className='banner relative left-1/2 -mt-14 flex h-[80vh] min-h-[500px] -translate-x-1/2 transform flex-col items-center justify-center'>
+    <div className='relative left-1/2 -mt-14 flex h-[80vh] min-h-[500px] -translate-x-1/2 transform flex-col items-center justify-center'>
       <Image
         src={HeroImage}
         width={1920}
