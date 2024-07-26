@@ -51,12 +51,12 @@ const FGSidebarMobile: FC<Props> = ({
       <div className='flex w-full items-center justify-between bg-zinc-800 p-5'>
         <Link
           href='/'
-          className='font-medium text-zinc-300 transition-all hover:text-white'>
+          className='hover:text-text-primary font-medium text-zinc-300 transition-all'>
           Forging Dev
         </Link>
         <ChevronsRight
           aria-label='close-sidebar'
-          className='cursor-pointer transition-all hover:text-white'
+          className='hover:text-text-primary cursor-pointer transition-all'
           onClick={() => setOpenedNavbar(false)}
         />
       </div>
@@ -104,7 +104,7 @@ const FGSidebarMobile: FC<Props> = ({
               alt={user.fullName || 'User Profile'}
             />
             <div className='flex flex-col gap-y-0.5'>
-              <div className='text-sm text-white'>{user?.fullName}</div>
+              <div className='text-text-primary text-sm'>{user?.fullName}</div>
               <div className='max-w-full overflow-hidden text-xs text-zinc-300'>
                 {user?.primaryEmailAddress?.emailAddress}
               </div>
@@ -119,7 +119,7 @@ const FGSidebarMobile: FC<Props> = ({
             />
           </>
         ) : (
-          <div className='mx-auto flex items-center gap-x-4 transition-all group-hover:text-white'>
+          <div className='group-hover:text-text-primary mx-auto flex items-center gap-x-4 transition-all'>
             Log In
             <LogIn />
           </div>

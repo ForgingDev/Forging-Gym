@@ -29,8 +29,8 @@ const FGSidebarItem: FC<Props> = ({
         className={cn(
           'flex items-center justify-between gap-x-3 rounded-lg px-2.5 py-2.5 text-zinc-300 transition-all',
           {
-            'bg-zinc-700 text-white shadow-sm': isNavbarItemSelected,
-            'hover:bg-zinc-700/50 hover:text-white hover:shadow-sm':
+            'text-text-primary bg-zinc-700 shadow-sm': isNavbarItemSelected,
+            'hover:text-text-primary hover:bg-zinc-700/50 hover:shadow-sm':
               !isNavbarItemSelected,
           }
         )}

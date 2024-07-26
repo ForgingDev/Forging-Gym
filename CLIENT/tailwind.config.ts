@@ -10,18 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          light: '#F3F4F6',
-          normal: '#1F2937',
-          dark: '#111827',
+          light: '#F87171',
+          normal: '#E6134C',
+          dark: '#991B4D',
         },
-        secondary: {
-          light: '#D1D5DB',
-          normal: '#6B7280',
-          dark: '#374151',
-        },
-        link: {
-          normal: '#3B82F6',
-          hover: '#2563EB',
+        text: {
+          primary: '#f4f4f5',
+          secondary: '#d4d4d8',
         },
       },
     },

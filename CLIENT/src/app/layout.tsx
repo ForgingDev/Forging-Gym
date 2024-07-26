@@ -1,5 +1,5 @@
+import AppLayout from '@/components/FGLayouts/FGAppLayout';
 import FGNotification from '@/components/FGLibrary/FGNotification';
-import FGSidebar from '@/components/FGLibrary/FGSidebar/FGSidebar';
 import GlobalDialogs from '@/components/GlobalDialogs';
 import { cn } from '@/lib/utils';
 import { ClerkProvider } from '@clerk/nextjs';
@@ -28,12 +28,14 @@ export default function RootLayout({
     <ClerkProvider>
       <PrimeReactProvider>
         <html lang='en'>
-          <body className={cn(inter.className, 'bg-zinc-800 text-white')}>
-            <FGSidebar />
+          <body
+            className={cn(inter.className, 'text-text-primary bg-zinc-800')}>
             <GlobalDialogs />
             <FGNotification />
             <HydrationProvider>
-              <main className='container mx-auto px-2 pt-16'>{children}</main>
+              <AppLayout>
+                <main>{children}</main>
+              </AppLayout>
             </HydrationProvider>
           </body>
         </html>

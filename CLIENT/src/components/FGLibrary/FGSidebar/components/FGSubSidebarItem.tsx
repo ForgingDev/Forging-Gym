@@ -13,7 +13,7 @@ const FGSubSidebarItem: FC<Props> = ({ subItem }) => {
   return (
     <Link
       href={url}
-      className='flex items-center gap-x-4 rounded-lg px-2.5 py-2.5 text-zinc-300 transition-all hover:bg-zinc-700/50 hover:text-white'>
+      className='hover:text-text-primary flex items-center gap-x-4 rounded-lg px-2.5 py-2.5 text-zinc-300 transition-all hover:bg-zinc-700/50'>
       <Circle className='p-1.5' />
       {label}
     </Link>

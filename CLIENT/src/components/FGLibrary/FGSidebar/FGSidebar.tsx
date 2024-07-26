@@ -40,8 +40,8 @@ const FGSidebar: FC = () => {
     <nav
       ref={navbarRef}
       id='navbar'
-      className='glass-effect border-b-1 bg-dark-purple fixed left-1/2 top-0 z-40 flex w-screen -translate-x-1/2 transform items-center justify-between border-zinc-200 border-opacity-15 bg-opacity-75 px-4 py-1 shadow-md'>
-      <div className='container mx-auto flex items-center justify-between'>
+      className='glass-effect border-b-1 bg-dark-purple fixed left-1/2 top-0 z-40 flex w-screen -translate-x-1/2 transform items-center justify-between border-zinc-200 border-opacity-15 bg-opacity-75 py-1 shadow-md'>
+      <div className='container mx-auto flex items-center justify-between px-2 sm:px-4'>
         <FGLogo />
         <FGSidebarMobile
           openedSideNavbar={openedNavbar}
