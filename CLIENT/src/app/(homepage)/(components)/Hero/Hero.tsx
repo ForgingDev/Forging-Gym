@@ -15,7 +15,7 @@ const Hero: FC = () => {
         alt='Hero'
         className='absolute -z-10 h-full w-full transform object-cover object-center opacity-90 brightness-50 filter'
       />
-      <div className='container px-2 sm:px-4'>
+      <div className='container mx-auto px-2 sm:px-4'>
         <div className='container max-w-screen-sm'>
           <div className='flex flex-col justify-center'>
             <h2 className='outline-text text-3xl font-semibold text-gray-800 md:text-4xl'>
