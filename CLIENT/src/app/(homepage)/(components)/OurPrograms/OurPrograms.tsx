@@ -14,7 +14,7 @@ const OurPrograms: FC = () => {
           return (
             <div
               key={item.title}
-              className='flex max-h-fit max-w-xs flex-col items-center space-y-6 rounded-2xl border-2 border-primary-normal p-4 text-center sm:w-[45%] lg:w-[30%] xl:w-[23%]'>
+              className='flex max-h-fit max-w-xs flex-col items-center space-y-6 rounded-2xl border-2 border-primary-normal p-4 text-center transition-all hover:scale-105 hover:border-white hover:bg-background-dark-red sm:w-[45%] lg:w-[30%] xl:w-[23%]'>
               <div className='rounded-full border-2 border-primary-normal p-12'>
                 <item.icon
                   className='size-12 text-xl'
