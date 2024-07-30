@@ -18,6 +18,10 @@ const config: Config = {
           primary: '#f4f4f5',
           secondary: '#d4d4d8',
         },
+        background: {
+          'dark-red': '#400000',
+          'dark-purple': '#150b16',
+        },
       },
     },
   },

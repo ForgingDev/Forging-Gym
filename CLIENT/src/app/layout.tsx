@@ -29,7 +29,10 @@ export default function RootLayout({
       <PrimeReactProvider>
         <html lang='en'>
           <body
-            className={cn(inter.className, 'text-text-primary bg-zinc-800')}>
+            className={cn(
+              inter.className,
+              'to-background-dark-purple from-background-dark-red bg-gradient-to-br text-text-primary'
+            )}>
             <GlobalDialogs />
             <FGNotification />
             <HydrationProvider>

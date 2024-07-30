@@ -22,6 +22,16 @@ body {
     1px 1px 0 #f87171;
 }
 
+@media (min-width: 768px) {
+  .why-join-us-image {
+    clip-path: polygon(0 0, 100% 0%, 76% 100%, 0% 100%);
+  }
+}
+
+.hero-container {
+  clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%);
+}
+
 .glass-effect {
   @apply bg-opacity-20 backdrop-blur-md backdrop-filter;
 }
