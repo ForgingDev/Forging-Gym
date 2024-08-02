@@ -2,7 +2,7 @@
 
 import { useGlobalDialogsStore } from '@/data/stores/useGlobalDialogsStore';
 import { GlobalDialogsEnum } from '@/data/types/global-dialogs.types';
-import { ChevronsLeft } from 'lucide-react';
+import { ChevronsLeft, ChevronsRight } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useClickOutside } from 'primereact/hooks';
 import { FC, useEffect, useRef, useState } from 'react';
@@ -47,12 +47,21 @@ const FGSidebar: FC = () => {
           openedSideNavbar={openedNavbar}
           setOpenedNavbar={setOpenedNavbar}
         />
-        <ChevronsLeft
-          id='chevron-left'
-          className='cursor-pointer'
-          aria-label='open-sidebar'
-          onClick={() => setOpenedNavbar(true)}
-        />
+        {openedNavbar ? (
+          <ChevronsRight
+            id='chevron-right'
+            className='cursor-pointer'
+            aria-label='close-sidebar'
+            onClick={() => setOpenedNavbar(false)}
+          />
+        ) : (
+          <ChevronsLeft
+            id='chevron-left'
+            className='cursor-pointer'
+            aria-label='open-sidebar'
+            onClick={() => setOpenedNavbar(true)}
+          />
+        )}
       </div>
     </nav>
   );
