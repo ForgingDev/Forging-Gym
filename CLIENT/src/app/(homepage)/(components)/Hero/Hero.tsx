@@ -18,7 +18,7 @@ const Hero: FC = () => {
       <div className='container mx-auto px-2 sm:px-4'>
         <div className='container max-w-screen-sm'>
           <div className='flex flex-col justify-center'>
-            <h2 className='outline-text text-3xl font-semibold text-gray-800 md:text-4xl'>
+            <h2 className='outline-text text-text-primary-normal text-3xl font-semibold md:text-4xl'>
               MAKE YOUR
             </h2>
             <h1 className='outline-text-dark my-4 text-5xl font-extrabold text-primary-normal md:my-6 md:text-7xl'>
