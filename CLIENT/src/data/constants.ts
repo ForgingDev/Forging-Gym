@@ -1,3 +1,4 @@
+import { ourProgramsType } from '@/app/(homepage)/(components)/OurPrograms/data/types/our-programs.types';
 import { ROUTES } from '@/lib/routes';
 import {
   BarChart4,
@@ -103,7 +104,7 @@ export const SIDEBAR_ITEMS: SidebarContentType[] = [
   },
 ];
 
-export const OUR_PROGRAMS_ITEMS = [{
+export const OUR_PROGRAMS_ITEMS:ourProgramsType[] = [{
   title: 'Weight Training',
   description: 'Strengthen and sculpt your muscles with our extensive range of free weights and resistance training equipment. From dumbbells and barbells to squat racks and cable machines.',
   icon: Dumbbell,

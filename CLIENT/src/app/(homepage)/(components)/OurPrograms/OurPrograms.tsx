@@ -1,29 +1,22 @@
 import { OUR_PROGRAMS_ITEMS } from '@/data/constants';
-import { ourProgramsType } from '@/data/types/ourPrograms.types';
 import { FC } from 'react';
+import { OurProgramsType } from './data/types/our-programs.types';
+import OurProgramsCard from './OurProgramsCard';
 
 const OurPrograms: FC = () => {
   return (
     <div className='space-y-16 pb-16'>
       <div className='md:text-5xl" text-center text-4xl font-bold'>
-        <span className='outline-text text-gray-800'>Our</span>{' '}
+        <span className='outline-text text-text-primary-normal'>Our</span>{' '}
         <span className='text-primary-normal'>Programs</span>
       </div>
       <div className='mx-4 flex flex-wrap justify-center gap-6 md:mx-0 lg:justify-between'>
-        {OUR_PROGRAMS_ITEMS.map((item: ourProgramsType) => {
+        {OUR_PROGRAMS_ITEMS.map((item: OurProgramsType) => {
           return (
-            <div
+            <OurProgramsCard
               key={item.title}
-              className='flex max-h-fit cursor-pointer flex-col items-center space-y-6 rounded-2xl border-2 border-primary-normal p-4 text-center transition-all hover:scale-105 hover:border-white hover:bg-background-dark-red sm:w-[45%] lg:w-[30%] xl:w-[23%]'>
-              <div className='rounded-full border-2 border-primary-normal p-12'>
-                <item.icon
-                  className='size-12 text-xl xl:size-16'
-                  aria-hidden='true'
-                />
-              </div>
-              <div className='text-xl font-bold'>{item.title}</div>
-              <div className='text-slate-100'>{item.description}</div>
-            </div>
+              item={item}
+            />
           );
         })}
       </div>
