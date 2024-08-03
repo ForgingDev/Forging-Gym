@@ -98,3 +98,5 @@ export const SIDEBAR_ITEMS: SidebarContentType[] = [
     ],
   },
 ];
+
+export const WEEK_DAYS_COUNT = 7;
