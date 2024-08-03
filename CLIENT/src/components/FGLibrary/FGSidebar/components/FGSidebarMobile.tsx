@@ -42,7 +42,7 @@ const FGSidebarMobile: FC<Props> = ({
   return (
     <div
       className={cn(
-        'fixed right-0 top-0 flex h-screen min-w-72 max-w-xs flex-col items-center overflow-hidden rounded-md bg-zinc-900 text-zinc-300 shadow-xl shadow-black transition-all duration-300 md:w-1/4',
+        'fixed right-0 top-0 flex h-screen w-3/5 max-w-xs flex-col items-center overflow-hidden rounded-md bg-zinc-900 text-zinc-300 shadow-xl shadow-black transition-all duration-300 md:w-1/4 md:min-w-72',
         {
           'translate-x-0': openedSideNavbar,
           'translate-x-full': !openedSideNavbar,
@@ -51,12 +51,12 @@ const FGSidebarMobile: FC<Props> = ({
       <div className='flex w-full items-center justify-between bg-zinc-800 p-5'>
         <Link
           href='/'
-          className='hover:text-text-primary font-medium text-zinc-300 transition-all'>
+          className='font-medium text-zinc-300 transition-all hover:text-text-primary'>
           Forging Dev
         </Link>
         <ChevronsRight
           aria-label='close-sidebar'
-          className='hover:text-text-primary cursor-pointer transition-all'
+          className='cursor-pointer transition-all hover:text-text-primary'
           onClick={() => setOpenedNavbar(false)}
         />
       </div>
@@ -104,7 +104,7 @@ const FGSidebarMobile: FC<Props> = ({
               alt={user.fullName || 'User Profile'}
             />
             <div className='flex flex-col gap-y-0.5'>
-              <div className='text-text-primary text-sm'>{user?.fullName}</div>
+              <div className='text-sm text-text-primary'>{user?.fullName}</div>
               <div className='max-w-full overflow-hidden text-xs text-zinc-300'>
                 {user?.primaryEmailAddress?.emailAddress}
               </div>
@@ -119,7 +119,7 @@ const FGSidebarMobile: FC<Props> = ({
             />
           </>
         ) : (
-          <div className='group-hover:text-text-primary mx-auto flex items-center gap-x-4 transition-all'>
+          <div className='mx-auto flex items-center gap-x-4 transition-all group-hover:text-text-primary'>
             Log In
             <LogIn />
           </div>
