@@ -11,10 +11,8 @@ const FGBackgroundDialog: FC = () => {
 
   return (
     <div
-      onClick={() => {
-        hideDialog();
-      }}
-      className='bg-off fixed inset-0 min-h-screen w-screen bg-black bg-opacity-50 md:hidden'
+      onClick={hideDialog}
+      className='bg-off fixed inset-0 z-40 min-h-screen w-screen bg-black bg-opacity-50 md:hidden'
     />
   );
 };
