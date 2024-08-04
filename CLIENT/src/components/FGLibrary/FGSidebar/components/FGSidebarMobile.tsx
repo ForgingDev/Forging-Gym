@@ -42,7 +42,7 @@ const FGSidebarMobile: FC<Props> = ({
   return (
     <div
       className={cn(
-        'fixed right-0 top-0 flex h-screen w-3/5 max-w-xs flex-col items-center overflow-hidden rounded-md bg-zinc-900 text-zinc-300 shadow-xl shadow-black transition-all duration-300 md:w-1/4 md:min-w-72',
+        'fixed right-0 top-0 flex h-screen w-3/5 max-w-xs flex-col items-center overflow-hidden rounded-l-md bg-zinc-900 text-zinc-300 shadow-xl shadow-black transition-all duration-300 md:w-1/4 md:min-w-72',
         {
           'translate-x-0': openedSideNavbar,
           'translate-x-full': !openedSideNavbar,
@@ -60,7 +60,7 @@ const FGSidebarMobile: FC<Props> = ({
           onClick={() => setOpenedNavbar(false)}
         />
       </div>
-      <div className='scrollbar h-screen w-full overflow-y-auto'>
+      <div className='scrollbar h-screen w-full overflow-y-scroll'>
         {sidebarItems.map((sidebarItems: SidebarContentType) => {
           const { title, items } = sidebarItems;
 
