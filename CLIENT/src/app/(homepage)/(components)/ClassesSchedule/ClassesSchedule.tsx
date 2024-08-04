@@ -5,12 +5,9 @@ import { WEEK_DAYS_COUNT } from '@/data/constants';
 import { DirectionsEnum } from '@/data/types/common.types';
 import { cn } from '@/lib/utils';
 import dayjs from 'dayjs';
-import 'dayjs/locale/ro';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { FC, useRef, useState } from 'react';
 import { ClassesScheduleType } from './data/types/classes-schedule.types';
-
-dayjs.locale('ro');
 
 const ClassesSchedule: FC = () => {
   const [isDragging, setIsDragging] = useState(false);
@@ -59,12 +56,18 @@ const ClassesSchedule: FC = () => {
   };
 
   const scrollToNextWeekday = (direction: DirectionsEnum) => {
-    const weekdays = document.getElementsByClassName('flex-1');
+    const weekdays = document.getElementsByClassName('weekday-container');
 
-    if (direction === 'left') {
-      weekdays[0].scrollIntoView({ behavior: 'smooth' });
+    if (direction === DirectionsEnum.LEFT) {
+      weekdays[0].scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+      });
     } else {
-      weekdays[weekdays.length - 1].scrollIntoView({ behavior: 'smooth' });
+      weekdays[weekdays.length - 1].scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+      });
     }
   };
 
@@ -74,11 +77,10 @@ const ClassesSchedule: FC = () => {
         highlightedText='Classes'
         normalText='Schedule'
       />
-
       <div className='relative'>
         <ChevronLeft
           onClick={() => scrollToNextWeekday(DirectionsEnum.LEFT)}
-          className='absolute left-2 top-2 h-10 w-auto cursor-pointer'
+          className='absolute left-3 top-4 h-auto w-8 cursor-pointer rounded-md bg-primary-dark'
         />
         <div
           ref={scrollRef}
@@ -93,15 +95,15 @@ const ClassesSchedule: FC = () => {
           {getNextWeekdays().map(weekday => (
             <div
               key={weekday.date}
-              className='min-w-52 flex-1 select-none p-1 text-center'>
-              <div className='font-semibold'>{weekday.name}</div>
-              <div className='text-sm text-text-secondary'>{weekday.date}</div>
+              className='weekday-container min-w-52 flex-1 select-none rounded-sm border-2 border-primary-dark bg-zinc-800 p-2 text-center text-text-primary shadow-md'>
+              <div className='font-semibold uppercase'>{weekday.name}</div>
+              <div className='text-sm'>{weekday.date}</div>
             </div>
           ))}
         </div>
         <ChevronRight
           onClick={() => scrollToNextWeekday(DirectionsEnum.RIGHT)}
-          className='absolute right-2 top-2 h-10 w-auto cursor-pointer'
+          className='absolute right-3 top-4 h-auto w-8 cursor-pointer rounded-md bg-primary-dark'
         />
       </div>
     </section>

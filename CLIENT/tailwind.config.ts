@@ -17,7 +17,7 @@ const config: Config = {
         text: {
           primary: '#f4f4f5',
           secondary: '#d4d4d8',
-          'primary-normal': '#1f2937'
+          'primary-normal': '#1f2937',
         },
         background: {
           'dark-red': '#400000',

@@ -12,7 +12,7 @@ const OurProgramsCard: FC<Props> = ({ item }) => {
     <div
       key={title}
       className='flex max-h-fit cursor-pointer flex-col items-center space-y-6 rounded-2xl border-2 border-primary-normal p-4 text-center transition-all hover:scale-105 hover:border-white hover:bg-background-dark-red sm:w-[45%] lg:w-[30%] xl:w-[23%]'>
-      <div className='rounded-full border-2 border-primary-normal p-12'>
+      <div className='rounded-full border-2 border-primary-normal p-6'>
         <item.icon className='size-12 text-xl xl:size-16' />
       </div>
       <div className='text-xl font-bold'>{title}</div>
