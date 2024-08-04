@@ -11,7 +11,7 @@ const OurPrograms: FC = () => {
         <span className='outline-text text-text-primary-normal'>Our</span>{' '}
         <span className='text-primary-normal'>Programs</span>
       </div>
-      <div className='mx-4 flex flex-wrap justify-center gap-6 md:mx-0 lg:justify-between'>
+      <div className='xs:mx-12 mx-4 flex flex-wrap justify-center gap-6 sm:mx-0 lg:justify-between lg:gap-10 xl:gap-6'>
         {OUR_PROGRAMS_ITEMS.map((item: OurProgramsType) => (
           <OurProgramsCard
             key={item.title}
