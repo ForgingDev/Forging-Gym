@@ -16,7 +16,7 @@ const WhyJoinUs: FC = () => {
           />
         </div>
         <div className='flex w-full flex-col justify-center gap-y-6 md:w-1/2 md:gap-y-10'>
-          <h2 className='text-4xl font-bold md:text-5xl'>
+          <h2 className='text-center text-4xl font-bold md:text-left md:text-5xl'>
             <span className='outline-text text-text-primary-normal'>WHY</span>{' '}
             <span className='text-primary-normal'>JOIN US?</span>
           </h2>

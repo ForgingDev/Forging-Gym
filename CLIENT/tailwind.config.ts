@@ -24,8 +24,13 @@ const config: Config = {
           'dark-purple': '#150b16',
         },
       },
+      screens: {
+        "xs": '425px',
+      }
     },
+
   },
   plugins: [],
+
 };
 export default config;

@@ -4,9 +4,18 @@ import HeroKPI from './HeroKPI';
 const HeroKPIs: FC = () => {
   return (
     <div className='flex flex-wrap items-center gap-4 sm:gap-8'>
-      <HeroKPI />
-      <HeroKPI />
-      <HeroKPI />
+      <HeroKPI
+        title='Fitness Trainer'
+        value='3K'
+      />
+      <HeroKPI
+        title='GYM Equipment'
+        value='200'
+      />
+      <HeroKPI
+        title='Happy Customers'
+        value='5K'
+      />
     </div>
   );
 };
