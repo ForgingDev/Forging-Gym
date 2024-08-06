@@ -1,5 +1,7 @@
+import { ScheduledClassModel } from '@/app/(homepage)/(components)/ClassesSchedule/data/types/classes-schedule.types';
 import { OurProgramsType } from '@/app/(homepage)/(components)/OurPrograms/data/types/our-programs.types';
 import { ROUTES } from '@/lib/routes';
+import dayjs from 'dayjs';
 import {
   BarChart4,
   CircleHelp,
@@ -13,6 +15,7 @@ import {
   Trophy,
   Users,
 } from 'lucide-react';
+import { DifficultyEnum } from './types/common.types';
 import { SidebarContentType } from './types/sidebar.types';
 
 export const MOBILE_BREAKPOINT = 767;
@@ -132,3 +135,76 @@ export const OUR_PROGRAMS_ITEMS: OurProgramsType[] = [
     icon: PersonStanding,
   },
 ];
+
+export const CLASSES: ScheduledClassModel[] = [
+  {
+    id: '1',
+    capacity: 10,
+    category: {
+      id: '1',
+      name: 'Weight Training',
+      difficulty: DifficultyEnum.ADVANCED,
+    },
+    instructor: {
+      id: '1',
+      name: 'John Doe',
+    },
+    title: 'Weight Training',
+    startingTime: dayjs().toDate(),
+    endingTime: dayjs().add(1, 'hour').toDate(),
+  },
+  {
+    id: '2',
+    capacity: 10,
+    category: {
+      id: '1',
+      name: 'Weight Training',
+      difficulty: DifficultyEnum.BEGINNER,
+    },
+    instructor: {
+      id: '1',
+      name: 'John Doe',
+    },
+    title: 'Weight Training',
+    startingTime: dayjs().add(6, 'day').toDate(),
+    endingTime: dayjs().add(1, 'hour').add(6, 'day').toDate(),
+  },
+  {
+    id: '3',
+    capacity: 10,
+    category: {
+      id: '1',
+      name: 'Weight Training',
+      difficulty: DifficultyEnum.BEGINNER,
+    },
+    instructor: {
+      id: '1',
+      name: 'John Doe',
+    },
+    title: 'Weight Training',
+    startingTime: dayjs().add(6, 'day').toDate(),
+    endingTime: dayjs().add(1, 'hour').add(6, 'day').toDate(),
+  },
+  {
+    id: '3',
+    capacity: 10,
+    category: {
+      id: '1',
+      name: 'Weight Training',
+      difficulty: DifficultyEnum.BEGINNER,
+    },
+    instructor: {
+      id: '1',
+      name: 'John Doe',
+    },
+    title: 'Weight Training',
+    startingTime: dayjs().add(13, 'day').toDate(),
+    endingTime: dayjs().add(1, 'hour').add(13, 'day').toDate(),
+  },
+];
+
+export const DATE_FORMATS = {
+  DAY_MONTH: 'DD MMM',
+  DAY_NAME: 'dddd',
+  HOUR_MINUTE: 'HH:mm',
+};
