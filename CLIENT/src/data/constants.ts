@@ -143,7 +143,7 @@ export const CLASSES: ScheduledClassModel[] = [
     category: {
       id: '1',
       name: 'Weight Training',
-      difficulty: DifficultyEnum.ADVANCED,
+      difficulty: DifficultyEnum.EASY,
     },
     instructor: {
       id: '1',
@@ -159,7 +159,7 @@ export const CLASSES: ScheduledClassModel[] = [
     category: {
       id: '1',
       name: 'Weight Training',
-      difficulty: DifficultyEnum.BEGINNER,
+      difficulty: DifficultyEnum.MEDIUM,
     },
     instructor: {
       id: '1',
@@ -175,7 +175,7 @@ export const CLASSES: ScheduledClassModel[] = [
     category: {
       id: '1',
       name: 'Weight Training',
-      difficulty: DifficultyEnum.BEGINNER,
+      difficulty: DifficultyEnum.HARD,
     },
     instructor: {
       id: '1',
@@ -191,7 +191,7 @@ export const CLASSES: ScheduledClassModel[] = [
     category: {
       id: '1',
       name: 'Weight Training',
-      difficulty: DifficultyEnum.BEGINNER,
+      difficulty: DifficultyEnum.EASY,
     },
     instructor: {
       id: '1',

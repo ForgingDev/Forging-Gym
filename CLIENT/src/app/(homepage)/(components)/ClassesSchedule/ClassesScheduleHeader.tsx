@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import { FC } from 'react';
 import { ClassesScheduleHelper } from './helpers/classes-schedule.helper';
 
@@ -9,7 +10,10 @@ const ClassesScheduleHeader: FC = () => {
       {getCurrentWeekDays().map(weekday => (
         <div
           key={weekday.date}
-          className='weekday-container min-w-52 flex-1 select-none border-2 border-primary-dark bg-zinc-800 p-2 text-center text-text-primary shadow-md'>
+          className={cn(
+            'min-w-52 flex-1 select-none border-2 border-primary-dark bg-zinc-800 p-2 text-center text-text-primary shadow-md',
+            weekday.name === 'Monday' ? 'weekday-container' : ''
+          )}>
           <div className='font-semibold uppercase'>{weekday.name}</div>
           <div className='text-sm'>{weekday.date}</div>
         </div>

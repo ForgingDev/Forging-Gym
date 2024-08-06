@@ -6,9 +6,9 @@ export enum DirectionsEnum {
 }
 
 export enum DifficultyEnum {
-  BEGINNER,
-  INTERMEDIATE,
-  ADVANCED,
+  EASY,
+  MEDIUM,
+  HARD,
 }
 
 // -------------------- FE ONLY TYPES --------------------

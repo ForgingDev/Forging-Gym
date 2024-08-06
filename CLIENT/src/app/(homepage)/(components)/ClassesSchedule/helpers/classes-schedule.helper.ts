@@ -1,5 +1,5 @@
 import { CLASSES, WEEK_DAYS_COUNT } from '@/data/constants';
-import { DirectionsEnum } from '@/data/types/common.types';
+import { DifficultyEnum, DirectionsEnum } from '@/data/types/common.types';
 import dayjs from 'dayjs';
 import {
   ClassesScheduleType,
@@ -31,7 +31,10 @@ const scrollToNextWeekday = (direction: DirectionsEnum): void => {
   if (direction === DirectionsEnum.LEFT) {
     weekdayContainer[0].scrollIntoView(scrollOptions);
   } else if (direction === DirectionsEnum.RIGHT) {
-    weekdayContainer[weekdayContainer.length - 1].scrollIntoView(scrollOptions);
+    weekdayContainer[weekdayContainer.length - 1].scrollIntoView({
+      ...scrollOptions,
+      inline: 'start',
+    });
   } else {
     console.warn('Invalid direction provided.');
   }
@@ -88,8 +91,22 @@ const getOrganisedClassesByDate = (): {
   return organisedClassesByDate;
 };
 
+export const getCardBackgroundColor = (difficulty: DifficultyEnum): string => {
+  switch (difficulty) {
+    case DifficultyEnum.EASY:
+      return 'bg-green-300';
+    case DifficultyEnum.MEDIUM:
+      return 'bg-yellow-300';
+    case DifficultyEnum.HARD:
+      return 'bg-red-300';
+    default:
+      return 'bg-purple-300';
+  }
+};
+
 export const ClassesScheduleHelper = {
   getCurrentWeekDays,
   scrollToNextWeekday,
   getOrganisedClassesByDate,
+  getCardBackgroundColor,
 };
