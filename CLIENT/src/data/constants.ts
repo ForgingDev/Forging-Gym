@@ -1,5 +1,7 @@
-import { ourProgramsType } from '@/app/(homepage)/(components)/OurPrograms/data/types/our-programs.types';
+import { ScheduledClassModel } from '@/app/(homepage)/(components)/ClassesSchedule/data/types/classes-schedule.types';
+import { OurProgramsType } from '@/app/(homepage)/(components)/OurPrograms/data/types/our-programs.types';
 import { ROUTES } from '@/lib/routes';
+import dayjs from 'dayjs';
 import {
   BarChart4,
   CircleHelp,
@@ -13,6 +15,7 @@ import {
   Trophy,
   Users,
 } from 'lucide-react';
+import { DifficultyEnum } from './types/common.types';
 import { SidebarContentType } from './types/sidebar.types';
 
 export const MOBILE_BREAKPOINT = 767;
@@ -104,23 +107,104 @@ export const SIDEBAR_ITEMS: SidebarContentType[] = [
   },
 ];
 
-export const OUR_PROGRAMS_ITEMS:ourProgramsType[] = [{
-  title: 'Weight Training',
-  description: 'Strengthen and sculpt your muscles with our extensive range of free weights and resistance training equipment. From dumbbells and barbells to squat racks and cable machines.',
-  icon: Dumbbell,
-},
-{
-  title: 'Cardio Zone',
-  description: 'Get your heart pumping and burn calories with our state-of-the-art cardio equipment. Whether you prefer running on the treadmill, cycling on the stationary bike, or climbing on the stair stepper.',
-  icon: HeartPulse,
-},
-{
-  title: 'Boxing Area',
-  description: 'Unleash your inner fighter in our dedicated boxing area. With heavy bags, speed bags, and boxing gloves available, you can enjoy a high-intensity workout that improves.',
-  icon: Trophy,
-},
-{
-  title: 'Yoga Studio',
-  description: 'Find balance and serenity in our tranquil yoga studio. Whether you\'re a beginner or an experienced yogi, our classes cater to all levels and styles, including Hatha, Vinyasa.',
-  icon: PersonStanding,
-}]
+export const WEEK_DAYS_COUNT = 7;
+
+export const OUR_PROGRAMS_ITEMS: OurProgramsType[] = [
+  {
+    title: 'Weight Training',
+    description:
+      'Strengthen and sculpt your muscles with our extensive range of free weights and resistance training equipment. From dumbbells and barbells to squat racks and cable machines.',
+    icon: Dumbbell,
+  },
+  {
+    title: 'Cardio Zone',
+    description:
+      'Get your heart pumping and burn calories with our state-of-the-art cardio equipment. Whether you prefer running on the treadmill, cycling on the stationary bike, or climbing on the stair stepper.',
+    icon: HeartPulse,
+  },
+  {
+    title: 'Boxing Area',
+    description:
+      'Unleash your inner fighter in our dedicated boxing area. With heavy bags, speed bags, and boxing gloves available, you can enjoy a high-intensity workout that improves.',
+    icon: Trophy,
+  },
+  {
+    title: 'Yoga Studio',
+    description:
+      "Find balance and serenity in our tranquil yoga studio. Whether you're a beginner or an experienced yogi, our classes cater to all levels and styles, including Hatha, Vinyasa.",
+    icon: PersonStanding,
+  },
+];
+
+export const CLASSES: ScheduledClassModel[] = [
+  {
+    id: '1',
+    capacity: 10,
+    category: {
+      id: '1',
+      name: 'Weight Training',
+      difficulty: DifficultyEnum.EASY,
+    },
+    instructor: {
+      id: '1',
+      name: 'John Doe',
+    },
+    title: 'Weight Training',
+    startingTime: dayjs().toDate(),
+    endingTime: dayjs().add(1, 'hour').toDate(),
+  },
+  {
+    id: '2',
+    capacity: 10,
+    category: {
+      id: '1',
+      name: 'Weight Training',
+      difficulty: DifficultyEnum.MEDIUM,
+    },
+    instructor: {
+      id: '1',
+      name: 'John Doe',
+    },
+    title: 'Weight Training',
+    startingTime: dayjs().add(6, 'day').toDate(),
+    endingTime: dayjs().add(1, 'hour').add(6, 'day').toDate(),
+  },
+  {
+    id: '3',
+    capacity: 10,
+    category: {
+      id: '1',
+      name: 'Weight Training',
+      difficulty: DifficultyEnum.HARD,
+    },
+    instructor: {
+      id: '1',
+      name: 'John Doe',
+    },
+    title: 'Weight Training',
+    startingTime: dayjs().add(6, 'day').toDate(),
+    endingTime: dayjs().add(1, 'hour').add(6, 'day').toDate(),
+  },
+  {
+    id: '3',
+    capacity: 10,
+    category: {
+      id: '1',
+      name: 'Weight Training',
+      difficulty: DifficultyEnum.EASY,
+    },
+    instructor: {
+      id: '1',
+      name: 'John Doe',
+    },
+    title: 'Weight Training',
+    startingTime: dayjs().add(13, 'day').toDate(),
+    endingTime: dayjs().add(1, 'hour').add(13, 'day').toDate(),
+  },
+];
+
+export const DATE_FORMATS = {
+  DAY_MONTH: 'DD MMM',
+  DAY_NAME: 'dddd',
+  HOUR_MINUTE: 'HH:mm',
+};

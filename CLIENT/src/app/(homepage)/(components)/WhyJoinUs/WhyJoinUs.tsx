@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 const WhyJoinUs: FC = () => {
   return (
-    <section className='py-16 text-white'>
+    <section>
       <div className='relative mx-auto flex flex-col items-stretch gap-x-6 md:flex-row'>
         <div className='mb-8 w-full md:mb-0 md:w-2/3'>
           <Image
