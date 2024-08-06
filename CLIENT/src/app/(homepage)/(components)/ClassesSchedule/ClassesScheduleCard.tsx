@@ -1,5 +1,4 @@
 import { DATE_FORMATS } from '@/data/constants';
-import { ObjectsHelper } from '@/data/helpers/objects.helper';
 import { cn } from '@/lib/utils';
 import dayjs from 'dayjs';
 import { User2 } from 'lucide-react';
@@ -18,7 +17,6 @@ const ClassesScheduleCard: FC<Props> = ({
   title,
 }) => {
   const { getCardBackgroundColor } = ClassesScheduleHelper;
-  const { getEnumKeyAsString } = ObjectsHelper;
 
   const formattedStartingTime = dayjs(startingTime).format(
     DATE_FORMATS.HOUR_MINUTE
